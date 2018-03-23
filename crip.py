@@ -1,6 +1,6 @@
 #msg = input("Mensagem: ")
 #ch = input("Chave: ")
-msg = "vai dar tudo certo"
+msg = "vaidartudocerto"
 ch = 5
 
 msgTrim = msg.replace(" ", "")
@@ -13,12 +13,15 @@ try:
         s = ""
         i = 0
         #for i in range(0,len(msgTrim),int(rows)):
-        while len(s)<=len(msgTrim):
-            if(int(rows) > (len(msgTrim)-i)):
-                i = abs(i-len(msgTrim))+1
+        while len(s) < len(msgTrim):
+            #if(int(rows) > (len(msgTrim)-i)):
+            if(i >= len(msgTrim)):
+                #i = abs(i-len(msgTrim))+1
+                i = (i % len(msgTrim)) + 1
             s += msgTrim[i]
+            #print("primeiro i: ",i)
             i = i + int(rows)
-            print(i)
+            #print("segundo i: ",i)
         print(s)
     else:
         print("erro")
