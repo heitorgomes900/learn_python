@@ -41,21 +41,20 @@ def p_reversa(p):
 def fatiar(msgTrim, p):
     i = 0
     lista = []
-    #j = len(p)
     while i < len(msgTrim):
-        #if len(part) < len(p):
-        #part = part + msgTrim[i]
         lista.append(msgTrim[i:i+len(p)])
         i = i + len(p)
-        #elif len(part) == len(p):
-        #    lista.append(part)
-        #    part = ''
-    #lista.append(part)
     return lista
 
 def p_valid(msgTrim, p):
     return len(msgTrim) % len(p) == 0
 
+def fatorial(n):
+    if n == 0 or n == 1:
+        return 1 
+    else:
+        return n * fatorial(n - 1) 
+    
 def criptografia():
     msg = input('Digite a mensagem: ')
     p = input('Digite a chave: ')
@@ -63,13 +62,16 @@ def criptografia():
     #p = '53412'
     msgTrim = msg.replace(" ", "")
     if p_valid(msgTrim, p):
-        lista = fatiar(msgTrim, p)
-        s = ""
-        i = 0
-        for i in range(0, len(lista)):
-            for j in range(0, len(lista[i])):
-                s = s + lista[i][int(p[j])-1]
-        print(s)
+        if fatorial(int(max(p))) is fatorial(len(p))
+            lista = fatiar(msgTrim, p)
+            s = ""
+            i = 0
+            for i in range(0, len(lista)):
+                for j in range(0, len(lista[i])):
+                    s = s + lista[i][int(p[j])-1]
+            print(s)
+        else:
+            print('Sua chave não é válida!')
     else:
         print('Sua chave não é válida!')
 
@@ -81,15 +83,17 @@ def descriptografia():
     #p = '53412'
     msgTrim = msg.replace(" ", "")
     if p_valid(msgTrim, p):
-        pRev = p_reversa(p)
-        lista = fatiar(msgTrim, p)
-        s = ""
-        i = 0
-        for i in range(0, len(lista)):
-            for j in range(0, len(lista[i])):
-                s = s + lista[i][int(pRev[j])-1]
-        print(s)
+        if fatorial(int(max(p))) is fatorial(len(p))
+            pRev = p_reversa(p)
+            lista = fatiar(msgTrim, p)
+            s = ""
+            i = 0
+            for i in range(0, len(lista)):
+                for j in range(0, len(lista[i])):
+                    s = s + lista[i][int(pRev[j])-1]
+            print(s)
+        else:
+            print('Sua chave não é válida!')
     else:
         print('Sua chave não é válida!')
-
 main()
