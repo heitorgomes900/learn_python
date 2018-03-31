@@ -1,10 +1,8 @@
-#msg = input("Mensagem: ")
-msg='ELAEBONITA'
+msg = input("Mensagem: ")
 
 letras = []
 c = 1
 i = 0
-#for i in range(0,len(msg)-1):
 while i < len(msg):
     if msg[i] in letras:
         i = i + 1
@@ -14,7 +12,6 @@ while i < len(msg):
             c = c + 1 
     if c % 2 == 0:
         msg = msg.replace(msg[i],'')
-        #letras.append(msg[i])
         c = 1
         i = 0
         continue
@@ -22,12 +19,9 @@ while i < len(msg):
         letras.append(msg[i])
     c = 1
     i = i + 1
-#print(msg)
-print(letras)
 
 for i in range(0,len(letras)):
     letras[i] = ord(letras[i])
-print(letras)
 
 divisor = 64
 count = 0
@@ -35,7 +29,7 @@ resultado = ''
 #while divisor > 0.5:
 while len(resultado) <= len(letras):
     for i in range(0,len(letras)):
-        if letras[i] > divisor:
+        if letras[i] >= divisor:
             letras[i] = letras[i] % divisor
             count = count + 1
     resultado = resultado + str(int(count % 2))

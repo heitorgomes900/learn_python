@@ -1,7 +1,7 @@
-#msg = input("Mensagem: ")
-#ch = input("Chave: ")
-msg = "vaidartudocerto"
-ch = 5
+msg = input("Mensagem: ")
+ch = input("Chave: ")
+#msg = "vaidartudocerto"
+#ch = 5
 
 msgTrim = msg.replace(" ", "")
 print(msgTrim)
