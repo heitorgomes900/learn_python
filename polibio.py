@@ -14,5 +14,5 @@ def criptografar():
             else:
                 i = i + 1
         i = 0
-    print(msgCrip)
+    print(msgCrip.strip().replace(' ','-'))
 criptografar()
