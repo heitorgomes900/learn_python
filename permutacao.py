@@ -55,6 +55,12 @@ def fatorial(n):
     else:
         return n * fatorial(n - 1) 
     
+def multiplicar(p):
+    result = 1
+    for i in p:
+        result = result * int(i)
+    return result
+
 def criptografia():
     msg = input('Digite a mensagem: ')
     p = input('Digite a chave: ')
@@ -62,7 +68,7 @@ def criptografia():
     #p = '53412'
     msgTrim = msg.replace(" ", "")
     if p_valid(msgTrim, p):
-        if fatorial(int(max(p))) is fatorial(len(p))
+        if multiplicar(p) is fatorial(len(p)):
             lista = fatiar(msgTrim, p)
             s = ""
             i = 0
@@ -83,7 +89,7 @@ def descriptografia():
     #p = '53412'
     msgTrim = msg.replace(" ", "")
     if p_valid(msgTrim, p):
-        if fatorial(int(max(p))) is fatorial(len(p))
+        if multiplicar(p) is fatorial(len(p)):
             pRev = p_reversa(p)
             lista = fatiar(msgTrim, p)
             s = ""
