@@ -1,28 +1,15 @@
 msg = input("Mensagem: ")
+msg = msg.replace(' ','')
 
 letras = []
-c = 1
-i = 0
-while i < len(msg):
-    if msg[i] in letras:
-        i = i + 1
-        continue
-    for j in range(i+1,len(msg)):
-        if(msg[i] is msg[j]):
-            c = c + 1 
-    if c % 2 == 0:
-        msg = msg.replace(msg[i],'')
-        c = 1
-        i = 0
-        continue
-    else:
-        letras.append(msg[i])
-    c = 1
-    i = i + 1
+
+for i in msg:
+    if not(msg.count(i) % 2 == 0) and not(i in letras):
+        letras.append(i)
 
 for i in range(0,len(letras)):
     letras[i] = ord(letras[i])
-
+print(letras)
 divisor = 64
 count = 0
 resultado = ''

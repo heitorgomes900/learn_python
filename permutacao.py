@@ -68,16 +68,16 @@ def criptografia():
     #p = '53412'
     msgTrim = msg.replace(" ", "")
     if p_valid(msgTrim, p):
-        if multiplicar(p) is fatorial(len(p)):
-            lista = fatiar(msgTrim, p)
-            s = ""
-            i = 0
-            for i in range(0, len(lista)):
-                for j in range(0, len(lista[i])):
-                    s = s + lista[i][int(p[j])-1]
-            print(s)
-        else:
-            print('Sua chave não é válida!')
+    #if multiplicar(p) is fatorial(len(p)):
+        lista = fatiar(msgTrim, p)
+        s = ""
+        i = 0
+        for i in range(0, len(lista)):
+            for j in range(0, len(lista[i])):
+                s = s + lista[i][int(p[j])-1]
+        print(s)
+    #else:
+    #    print('Sua chave não é válida!')
     else:
         print('Sua chave não é válida!')
 
@@ -89,17 +89,17 @@ def descriptografia():
     #p = '53412'
     msgTrim = msg.replace(" ", "")
     if p_valid(msgTrim, p):
-        if multiplicar(p) is fatorial(len(p)):
-            pRev = p_reversa(p)
-            lista = fatiar(msgTrim, p)
-            s = ""
-            i = 0
-            for i in range(0, len(lista)):
-                for j in range(0, len(lista[i])):
-                    s = s + lista[i][int(pRev[j])-1]
-            print(s)
-        else:
-            print('Sua chave não é válida!')
+    #if multiplicar(p) is fatorial(len(p)):
+        pRev = p_reversa(p)
+        lista = fatiar(msgTrim, p)
+        s = ""
+        i = 0
+        for i in range(0, len(lista)):
+            for j in range(0, len(lista[i])):
+                s = s + lista[i][int(pRev[j])-1]
+        print(s)
+    #else:
+    #    print('Sua chave não é válida!')
     else:
         print('Sua chave não é válida!')
 main()
