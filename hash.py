@@ -13,8 +13,8 @@ print(letras)
 divisor = 64
 count = 0
 resultado = ''
-#while divisor > 0.5:
-while len(resultado) <= len(letras):
+while divisor > 0.5:
+#while len(resultado) <= len(letras):
     for i in range(0,len(letras)):
         if letras[i] >= divisor:
             letras[i] = letras[i] % divisor
