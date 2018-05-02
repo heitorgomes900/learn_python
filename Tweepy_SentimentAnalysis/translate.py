@@ -1,5 +1,8 @@
-from TextBlob import textblob
+from textblob import TextBlob
+import json
 
 text = TextBlob("Eu estou triste")
-text.translate(to="en")
+text = text.translate(to="en")
 print(text)
+
+type('teste')
