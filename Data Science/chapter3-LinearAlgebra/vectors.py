@@ -99,6 +99,9 @@ def make_matrix(num_rows, num_cols, entry_fn):
              for j in range(num_cols)]  # [entry_fn(i, 0), ...]
             for i in range(num_rows)]  # cria uma lista para cada i
 
+def is_diagonal(i, j):
+    """ 1's na diagonal, 0's nos demais lugares """
+    return 1 if i == j else 0
 
 def make_graph_dot_product_as_vector_projection(plt):
 
